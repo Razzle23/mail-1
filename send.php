@@ -30,7 +30,6 @@ if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
     $mail->Body = $body;
     $mail->WordWrap = 50;
     $mail->AddAddress($email);
-    $mail->AddAttachment("c:/1.txt", "1.txt");
     if(!$mail->send()) {
       echo '<div class="alert alert-danger"><p class="text-center"><strong>Ваше сообщение не отправлено</strong></p></div>';
       exit;
