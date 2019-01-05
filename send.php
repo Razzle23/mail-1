@@ -12,6 +12,7 @@ if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
     $email = myclear($_POST['email']);//фильтруем
     $body = myclear($_POST['body']);
     $mail = new PHPMailer();
+    $mail->SetLanguage("ru", 'includes/phpMailer/language/');
     $mail->IsSMTP();
     $mail->Host       = "smtp.gmail.com"; 
     $mail->SMTPDebug  = 0; 
